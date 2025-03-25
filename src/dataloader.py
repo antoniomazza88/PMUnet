@@ -21,14 +21,14 @@ class S5P_P25(Dataset):
         cams = patch[-1:, :, :]/ 63
         s5p = patch[:-1, :, :]/ 2e-6
 
-        # B, H, W = s5p.shape
-        # rH = H % 8
-        # rW = W % 8
-        # minr = rH // 2
-        # minw = rW // 2
-        # maxr = H if rH == 0 else -rH // 2
-        # maxw = W if rW == 0 else -rW // 2
-        # s5p = s5p[:, minr:maxr, minw:maxw]
-        # cams = cams[:, minr:maxr, minw:maxw]
+        B, H, W = s5p.shape
+        rH = H % 8
+        rW = W % 8
+        minr = rH // 2
+        minw = rW // 2
+        maxr = H if rH == 0 else -rH // 2
+        maxw = W if rW == 0 else -rW // 2
+        s5p = s5p[:, minr:maxr, minw:maxw]
+        cams = cams[:, minr:maxr, minw:maxw]
 
         return s5p.to(self.device), cams.to(self.device)
