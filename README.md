@@ -1,6 +1,6 @@
 # PM2.5 Retrieval with Sentinel-5P Data using Deep Learning
 
-This repository contains the implementation of deep learning models for the retrieval of PM2.5 concentrations from Sentinel-5P data over Europe. The models used include a U-Net, ResNet, and SlimNet architectures, with pretrained weights and the associated dataset available for download.
+This repository contains the implementation of deep learning models for the retrieval of **PM2.5 concentrations from Sentinel-5P data over Europe**. The project implements the PMUNet, PMRes, and PMSlim architectures, with pretrained weights and the associated dataset available for download.
 
 ## Overview
 
