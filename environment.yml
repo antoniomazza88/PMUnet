@@ -1,0 +1,14 @@
+name: pmnet
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+  - nvidia
+dependencies:
+  - pytorch==2.1.1
+  - pytorch-cuda=11.8
+  - torchaudio==2.1.1
+  - torchvision==0.16.1
+  - tqdm
+  - imageio
+  - numpy==1.26.3
