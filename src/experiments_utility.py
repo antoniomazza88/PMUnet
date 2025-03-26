@@ -55,7 +55,7 @@ def trainloop(args):
             val_losses = val_epoch(net, validloader, device)
             for k in val_losses.keys():
                 if not k in val_tot.keys():
-                    val_tot[k] = torch.zeros((1, 6))
+                    val_tot[k] = torch.zeros((1, 501))
                 val_tot[k][:, cont] = val_losses[k]
                 torch.save(val_tot[k], os.path.join(checkpoint_dir, 'val_{}.t7'.format(k)))
             if val_losses['loss'] < min_loss:
@@ -64,7 +64,7 @@ def trainloop(args):
 
             cont = cont + 1
         stop = train_epoch(optimizer, cont, expname, net, trainloader, device)
-        stop = stop or cont >= 5
+        stop = stop or cont >= 500
     # checkpoint_dir = save_checkpoint(net, out_dir)
     val_losses = val_epoch(net=net, dataloader=validloader, device=device)
     for k in val_losses.keys():
