@@ -90,7 +90,7 @@ def init_experiment(args, device):
     if args.exp_name == None:
         name = "{}".format(args.model)
     else:
-        name = args.ex_name
+        name = args.exp_name
 
     save = os.path.join(args.out_folder, name)
     os.makedirs(save, exist_ok=True)
@@ -250,7 +250,7 @@ def init_test(args, device):
     if args.exp_name == None:
         name = "{}".format(args.model)
     else:
-        name = args.ex_name
+        name = args.exp_name
     save = os.path.join(args.out_folder, name)
     os.makedirs(save, exist_ok=True)
     model = load_checkpoint(model, os.path.join(save, 'checkpoint'))
