@@ -1,6 +1,6 @@
 # PM2.5 Retrieval with Sentinel-5P Data using Deep Learning
 
-This repository contains the implementation of deep learning models for the retrieval of **PM2.5 concentrations from Sentinel-5P data over Europe**. The project implements the PMUNet, PMRes, and PMSlim architectures, with pretrained weights and the associated dataset available for download.
+This repository contains the implementation of deep learning models for the retrieval of [**PM2.5 concentrations from Sentinel-5P data over Europe**](https://ieeexplore.ieee.org/abstract/document/10945399/). The project implements the PMUNet, PMRes, and PMSlim architectures, with pretrained weights and the associated dataset available for download.
 
 ## Overview
 
@@ -20,7 +20,7 @@ The project uses the following evaluation metrics to assess the performance of t
 Pretrained weights for each model are provided, allowing for easy fine-tuning or direct application to similar datasets.
 
 ## Dataset
-The dataset used for training and validation is based on Sentinel-5P data for the European region. The dataset includes cloud-free images with ground truth PM2.5 concentrations provided by CAMS[1]. The processed dataset used for the training is available for public use.
+The dataset used for training and validation is based on Sentinel-5P data for the European region. The dataset includes cloud-free images with ground truth PM2.5 concentrations provided by CAMS[1]. The processed dataset used for the training is available [here](https://ieee-dataport.org/documents/s5p2pm) for public use.
 
 ## Installation
 
@@ -92,16 +92,16 @@ By downloading and/or using any of these files, you implicitly agree to all the 
 
 If you use this CNN-based approach in your research or wish to refer to the baseline results, please use the following __BibTeX__ entry.
 ```
-@article{mazza2025,
-  title={PM2.5  Retrieval with Sentinel-5P Data over Europe Exploiting Deep Learning},
-  author={Mazza, Antonio and Guarino, Giuseppe and Scarpa, Giuseppe and Qiangqiang, Yuan and Gaetano, Raffaele},
-  journal={IEEE Transactions on Geoscience and Remote Sensing},
-  volume={},
-  number={},
-  pages={},
+@ARTICLE{Mazza2025,
+  author={Mazza, Antonio and Guarino, Giuseppe and Scarpa, Giuseppe and Yuan, Qiangqiang and Vivone, Gemine},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={PM2.5 Retrieval With Sentinel-5P Data Over Europe Exploiting Deep Learning}, 
   year={2025},
-  publisher={IEEE}
-}
+  volume={63},
+  number={},
+  pages={1-17},
+  keywords={Atmospheric modeling;Europe;Pollution measurement;Cams;Atmospheric measurements;Estimation;Deep learning;Training;Remote sensing;Satellites;Air pollution;convolutional neural network (NN);deep learning (DL);particulate matter (PM);remote sensing;sentinel-5P},
+  doi={10.1109/TGRS.2025.3555637}}
 ```
 
 # References
